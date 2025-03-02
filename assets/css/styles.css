@@ -1,0 +1,297 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.868);
+  backdrop-filter: blur(20px); /* Subtle frosted glass effect */
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  height:55px;
+  z-index: 1000;
+  width: 100%;
+  padding: 10px 15px;
+}
+
+/* Logo Styles */
+.navbar .logo {
+  color: #231e1e; 
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: auto;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Light shadow to make logo stand out */
+}
+
+/* Navigation Menu */
+.navbar nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar nav ul li a {
+  color: #1c1919;
+  text-decoration:none;
+  font-size: 18px;
+  font-weight: 700;
+  transition: color 0.3s ease-in-out;
+
+ }
+.navbar nav ul li a:hover {
+  color: #100704;
+
+  
+}
+
+/* Hamburger Icon */
+.hamburger {
+margin-top: -10px;
+  display: none;
+  font-size: 30px;
+  color: rgb(6, 6, 6);
+  cursor: pointer;
+}
+
+/* Center the navbar items for small screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .navbar nav ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
+
+
+  .hero-section {
+    padding: 80px 20px;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+/* Hero Section Styles */
+.hero-section {
+  background-image: url('../images/img12.jpg'); 
+  background-size: cover;
+  background-position: center; 
+  color: #fff;
+  padding: 120px 0;
+
+  z-index: 0;
+  text-align: center;
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 1; 
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.hero-section .btn {
+  background-color: #222d35;
+  color: white;
+  font-size: 18px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.hero-section .btn:hover {
+  background-color: #89b1c5;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 20px; 
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 18px; 
+  }
+}
+
+/* Content Section Styles */
+.content-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.content-section h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.content-section p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #777;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Styles */
+footer {
+  background-color: #091014;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 50px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar nav ul.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .hero-section {
+    padding: 80px 20px;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 30px; 
+  }
+
+  .hero-content p {
+    font-size: 18px; 
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
